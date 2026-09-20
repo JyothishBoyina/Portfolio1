@@ -1,21 +1,33 @@
-﻿import { projects } from '../data/projects.js'
+﻿import { motion } from 'framer-motion'
+import { projects } from '../data/projects.js'
 
 export default function Projects() {
   return (
     <section id="projects" className="bg-slate-900 py-24">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
           <h2 className="text-3xl font-bold text-white sm:text-4xl">Featured Projects</h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-            A selection of things I've built â€” from AI assistants to forecasting tools and
+            A selection of things I've built — from AI assistants to forecasting tools and
             full-stack platforms.
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <article
+          {projects.map((project, index) => (
+            <motion.article
               key={project.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              whileHover={{ y: -8, scale: 1.01 }}
               className="project-card group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 shadow-lg"
             >
               <div className="project-visual relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -86,7 +98,7 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

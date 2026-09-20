@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import profileImage from '../assets/Profile.jpg'
 
 function TechIcon({ name }) {
@@ -131,6 +132,11 @@ function TechIcon({ name }) {
   }
 }
 
+const reveal = {
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
+}
+
 export default function Hero() {
   return (
     <section className="hero-shell relative overflow-hidden bg-slate-950 py-20 sm:py-28">
@@ -140,74 +146,123 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1.3fr_0.7fr]">
-          <div className="text-left">
-            <span className="hero-badge glass-pill inline-flex items-center rounded-full border border-indigo-400/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium tracking-[0.12em] text-indigo-300 uppercase">
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.65, ease: 'easeOut' }}
+            className="text-left"
+          >
+            <motion.span
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.45 }}
+              className="hero-badge glass-pill inline-flex items-center rounded-full border border-indigo-400/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium tracking-[0.12em] text-indigo-300 uppercase"
+            >
               AWS Certified Cloud Practitioner
-            </span>
+            </motion.span>
 
-            <div className="hero-badge glass-pill mt-4 inline-flex items-center rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.45 }}
+              className="hero-badge glass-pill mt-4 inline-flex items-center rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300"
+            >
               Associate Technical Consultant @ Perficient India
-            </div>
+            </motion.div>
 
-            <h1 className="hero-title mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.55 }}
+              className="hero-title mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl"
+            >
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
                 Jyothish Boyina
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="mt-5 max-w-4xl text-xl font-medium leading-[1.2] text-slate-200 sm:text-2xl lg:text-3xl">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.55 }}
+              className="mt-5 max-w-4xl text-xl font-medium leading-[1.2] text-slate-200 sm:text-2xl lg:text-3xl"
+            >
               Working in the{' '}
               <span className="text-white">AI Product Development &amp; Delivery</span> line —
               building AI-powered and data-driven applications with{' '}
               <span className="text-white">React, Java &amp; AI</span>.
-            </p>
+            </motion.p>
 
-            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base lg:text-lg">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.38, duration: 0.55 }}
+              className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base lg:text-lg"
+            >
               From intelligent chatbots and LLM-powered tools to forecasting systems and
               full-stack platforms, I build impactful digital products that turn ideas into
               scalable, real-world solutions.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.42, duration: 0.55 }}
+              className="mt-8 flex flex-wrap items-center gap-4"
+            >
+              <motion.a
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
                 href="#projects"
-                className="primary-cta rounded-xl bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-sky-500/20"
+                className="primary-cta rounded-xl bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition duration-300 hover:shadow-xl hover:shadow-sky-500/20"
               >
                 View Projects
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
                 href="mailto:jyothish24092004@gmail.com"
-                className="secondary-cta rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:text-white"
+                className="secondary-cta rounded-xl border border-slate-600 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:border-slate-400 hover:text-white"
               >
                 Contact Me
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.08, y: -2 }}
+                whileTap={{ scale: 0.96 }}
                 href="https://github.com/JyothishBoyina"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
-                className="social-button flex h-11 w-11 items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:text-white"
+                className="social-button flex h-11 w-11 items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 text-slate-200 transition duration-300 hover:border-slate-400 hover:text-white"
               >
                 <svg viewBox="0 0 16 16" className="h-5 w-5 fill-current" aria-hidden="true">
                   <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
                 </svg>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.08, y: -2 }}
+                whileTap={{ scale: 0.96 }}
                 href="https://www.linkedin.com/in/boyina-jyothish/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
-                className="social-button flex h-11 w-11 items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:text-white"
+                className="social-button flex h-11 w-11 items-center justify-center rounded-xl border border-slate-600 bg-slate-900/60 text-slate-200 transition duration-300 hover:border-slate-400 hover:text-white"
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
                   <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z" />
                 </svg>
-              </a>
-            </div>
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
 
-          <div className="hero-card relative mx-auto w-full max-w-md">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
+            className="hero-card relative mx-auto w-full max-w-md"
+          >
             <div className="hero-glow absolute -inset-4 rounded-[2rem] bg-gradient-to-r from-indigo-500/30 via-sky-400/20 to-cyan-400/10 blur-2xl" />
             <div className="hero-image-wrap relative overflow-hidden rounded-[2rem] border border-slate-700/80 bg-slate-900/80 p-4 shadow-2xl shadow-slate-950/60 backdrop-blur-sm">
               <img
@@ -230,10 +285,15 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="mt-16 space-y-6 text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-16 space-y-6 text-left"
+        >
           <div className="info-card rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-xl shadow-slate-950/30">
             <h2 className="mb-5 text-lg font-semibold uppercase tracking-[0.12em] text-sky-300">
               Certifications
@@ -375,7 +435,7 @@ export default function Hero() {
               <li>• Participated in Google DevSprint Hackathon 2025</li>
             </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
