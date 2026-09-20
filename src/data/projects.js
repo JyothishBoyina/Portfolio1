@@ -36,7 +36,7 @@ export const projects = [
     image:
       'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=900&q=80',
     tags: ['Java', 'MySQL', 'JDBC', 'OOPs', 'Banking System'],
-    repo: '',
+    repo: 'https://github.com/JyothishBoyina/BankManagementSystem',
     demo: '',
   },
 ]
