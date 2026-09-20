@@ -256,6 +256,20 @@ export default function Hero() {
                 </svg>
               </motion.a>
             </motion.div>
+
+            <motion.a
+              href="#about"
+              className="scroll-prompt"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              aria-label="Scroll to About section"
+            >
+              <span className="scroll-text">Scroll</span>
+              <span className="scroll-wheel" aria-hidden="true">
+                <span className="scroll-dot" />
+              </span>
+            </motion.a>
           </motion.div>
 
           <motion.div
@@ -289,13 +303,24 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
+        <motion.section
           id="about"
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
           className="mt-16 space-y-6 text-left"
         >
+          <div className="info-card rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-xl shadow-slate-950/30">
+            <h2 className="mb-4 text-lg font-semibold uppercase tracking-[0.12em] text-sky-300">
+              About Me
+            </h2>
+            <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+              I’m a Computer Science graduate focused on building AI-powered, data-driven products
+              and scalable web solutions. My experience combines frontend engineering, backend APIs,
+              cloud workflows, and applied AI to develop impactful systems for real-world use cases.
+            </p>
+          </div>
+
           <div className="info-card rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-xl shadow-slate-950/30">
             <h2 className="mb-5 text-lg font-semibold uppercase tracking-[0.12em] text-sky-300">
               Certifications
@@ -437,7 +462,7 @@ export default function Hero() {
               <li>• Participated in Google DevSprint Hackathon 2025</li>
             </ul>
           </div>
-        </motion.div>
+        </motion.section>
       </div>
     </section>
   )
