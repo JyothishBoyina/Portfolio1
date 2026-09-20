@@ -139,7 +139,7 @@ const reveal = {
 
 export default function Hero() {
   return (
-    <section id="home" className="hero-shell relative overflow-hidden bg-slate-950 py-20 sm:py-28">
+    <section id="home" className="hero-shell relative overflow-hidden bg-slate-950 py-10 sm:py-16">
       <div className="hero-network" aria-hidden="true" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_50%)]" />
       <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
@@ -176,7 +176,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.55 }}
-              className="hero-title mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl"
+              className="hero-title mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl"
             >
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
@@ -188,7 +188,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.55 }}
-              className="mt-5 max-w-4xl text-xl font-medium leading-[1.2] text-slate-200 sm:text-2xl lg:text-3xl"
+              className="mt-4 max-w-4xl text-xl font-medium leading-[1.2] text-slate-200 sm:text-2xl lg:text-3xl"
             >
               Working in the{' '}
               <span className="text-white">AI Product Development &amp; Delivery</span> line —
@@ -200,7 +200,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.38, duration: 0.55 }}
-              className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base lg:text-lg"
+              className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-400 sm:text-base lg:text-lg"
             >
               From intelligent chatbots and LLM-powered tools to forecasting systems and
               full-stack platforms, I build impactful digital products that turn ideas into
@@ -211,7 +211,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.42, duration: 0.55 }}
-              className="mt-8 flex flex-wrap items-center gap-4"
+              className="mt-6 flex flex-wrap items-center gap-4"
             >
               <motion.a
                 whileHover={{ scale: 1.03, y: -2 }}
