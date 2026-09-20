@@ -139,7 +139,8 @@ const reveal = {
 
 export default function Hero() {
   return (
-    <section className="hero-shell relative overflow-hidden bg-slate-950 py-20 sm:py-28">
+    <section id="home" className="hero-shell relative overflow-hidden bg-slate-950 py-20 sm:py-28">
+      <div className="hero-network" aria-hidden="true" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_50%)]" />
       <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl" />
@@ -289,6 +290,7 @@ export default function Hero() {
         </div>
 
         <motion.div
+          id="about"
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
@@ -320,7 +322,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="info-card rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-xl shadow-slate-950/30">
+          <div id="skills" className="info-card rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-xl shadow-slate-950/30">
             <h2 className="mb-5 text-lg font-semibold uppercase tracking-[0.12em] text-sky-300">
               Technical Skills
             </h2>
