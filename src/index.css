@@ -208,7 +208,11 @@ body::after {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 3;
+}
+
+.hero-shell {
+  min-height: calc(100vh - 72px);
 }
 
 .scroll-wheel {
