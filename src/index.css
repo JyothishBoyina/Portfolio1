@@ -16,10 +16,48 @@ body {
     radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 32%),
     radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 28%),
     #020817;
+  color: #e2e8f0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.hero-shell {
+  position: relative;
+}
+
+.glass-pill {
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.hero-title {
+  letter-spacing: -0.06em;
+  text-shadow: 0 0 25px rgba(59, 130, 246, 0.18);
+}
+
+.primary-cta,
+.secondary-cta,
+.social-button,
+.stat-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.primary-cta:hover,
+.secondary-cta:hover,
+.social-button:hover,
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.6));
+}
+
+.stat-card:hover {
+  border-color: rgba(103, 232, 249, 0.5);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.12);
 }
 
 @keyframes fadeUp {
