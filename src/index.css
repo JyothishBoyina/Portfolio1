@@ -192,56 +192,8 @@ body::after {
   transform: rotate(14deg);
 }
 
-.scroll-prompt {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin: 0;
-  color: rgba(191, 219, 254, 0.9);
-  text-decoration: none;
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  z-index: 3;
-}
-
 .hero-shell {
   min-height: calc(100vh - 72px);
-}
-
-.scroll-wheel {
-  position: relative;
-  display: inline-flex;
-  width: 2.1rem;
-  height: 3.2rem;
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  border-radius: 999px;
-  align-items: flex-start;
-  justify-content: center;
-  background: rgba(15, 23, 42, 0.55);
-  box-shadow: inset 0 0 10px rgba(96, 165, 250, 0.15);
-}
-
-.scroll-dot {
-  position: absolute;
-  top: 0.55rem;
-  width: 0.45rem;
-  height: 0.7rem;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #7dd3fc, #38bdf8);
-  animation: scrollDown 1.8s infinite ease-in-out;
-}
-
-@keyframes scrollDown {
-  0% { transform: translateY(0); opacity: 0.7; }
-  50% { transform: translateY(0.85rem); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.4; }
 }
 
 .contact-section {

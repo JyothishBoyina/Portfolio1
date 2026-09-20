@@ -257,19 +257,6 @@ export default function Hero() {
               </motion.a>
             </motion.div>
 
-            <motion.a
-              href="#about"
-              className="scroll-prompt"
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              aria-label="Scroll to About section"
-            >
-              <span className="scroll-text">Scroll</span>
-              <span className="scroll-wheel" aria-hidden="true">
-                <span className="scroll-dot" />
-              </span>
-            </motion.a>
           </motion.div>
 
           <motion.div
