@@ -60,6 +60,7 @@ export default function App() {
               <span>Jyothish Boyina</span>
               <span>Computer Science Undergraduate</span>
               <span>VIT-AP University</span>
+              <span>Perficient India</span>
             </div>
           </div>
         </section>
