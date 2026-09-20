@@ -16,14 +16,14 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 shadow-lg transition hover:-translate-y-1 hover:border-indigo-500/50 hover:shadow-xl"
+              className="project-card group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 shadow-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+              <div className="project-visual relative aspect-[16/10] overflow-hidden bg-slate-900">
                 <img
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  className="project-image h-full w-full object-cover"
                 />
               </div>
 

@@ -12,7 +12,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #020817;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 28%),
+    #020817;
 }
 
 * {
@@ -50,10 +53,34 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes slowDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
 .hero-card,
 .hero-badge,
 .skill-badge,
-.info-card {
+.info-card,
+.project-card {
   animation: fadeUp 0.7s ease-out both;
 }
 
@@ -69,18 +96,27 @@ body {
   animation-delay: 0.18s;
 }
 
+.project-card {
+  animation-delay: 0.1s;
+}
+
 .hero-image-wrap {
   animation: floatGlow 5s ease-in-out infinite;
 }
 
+.hero-glow {
+  animation: pulseSoft 4s ease-in-out infinite;
+}
+
 .skill-badge {
-  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skill-badge:hover {
   transform: translateY(-2px);
   border-color: rgba(103, 232, 249, 0.5);
   background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.12);
 }
 
 .info-card {
@@ -93,7 +129,53 @@ body {
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
 }
 
-.hero-glow {
-  animation: pulseSoft 4s ease-in-out infinite;
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.45);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
+}
+
+.project-card:hover .project-visual::after {
+  opacity: 1;
+}
+
+.project-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.18) 45%, transparent 70%);
+  transform: translateX(-120%);
+  animation: shimmer 1.7s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image {
+  transition: transform 0.45s ease, filter 0.3s ease;
+  filter: saturate(1.06) contrast(1.04);
+}
+
+.project-card a:hover {
+  text-shadow: 0 0 18px rgba(125, 211, 252, 0.3);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
