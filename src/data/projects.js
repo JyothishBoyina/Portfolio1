@@ -29,4 +29,14 @@ export const projects = [
     repo: 'https://github.com/JyothishBoyina/Food-Dhuniya',
     demo: '',
   },
+  {
+    title: 'Bank Management System',
+    description:
+      'Object-oriented banking application built using Java and JDBC, supporting deposits, withdrawals, cash and PIN management with strong validation.',
+    image:
+      'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=900&q=80',
+    tags: ['Java', 'MySQL', 'JDBC', 'OOPs', 'Banking System'],
+    repo: '',
+    demo: '',
+  },
 ]
