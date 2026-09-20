@@ -15,7 +15,7 @@ export default function App() {
       <header className="site-header">
         <div className="nav-inner">
           <a href="#home" className="brand" aria-label="Go to home section">
-            <span className="brand-mark">J</span>
+            <span className="brand-mark">JB</span>
           </a>
 
           <nav className="nav-links" aria-label="Main navigation">
