@@ -183,7 +183,7 @@ export default function Hero() {
                 Contact Me
               </a>
               <a
-                href="https://github.com/jyothish-boyina_prft"
+                href="https://github.com/JyothishBoyina"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
