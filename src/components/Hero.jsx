@@ -315,9 +315,11 @@ export default function Hero() {
               About Me
             </h2>
             <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-              I’m a Computer Science graduate focused on building AI-powered, data-driven products
-              and scalable web solutions. My experience combines frontend engineering, backend APIs,
-              cloud workflows, and applied AI to develop impactful systems for real-world use cases.
+              I’m Jyothish Boyina, a Computer Science undergraduate at VIT-AP University, currently
+              working as an Associate Technical Consultant in the AI Product Development team at
+              Perficient India. I build AI-powered, data-driven applications using React, Java,
+              Python, SQL, and modern GenAI workflows to deliver practical digital products that solve
+              real business challenges.
             </p>
           </div>
 

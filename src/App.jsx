@@ -44,11 +44,22 @@ export default function App() {
           <div className="contact-box">
             <p className="eyebrow">Let’s build something meaningful</p>
             <h3>Available for AI product and full-stack development work.</h3>
-            <div className="contact-actions">
+
+            <div className="contact-meta">
               <a href="mailto:jyothish24092004@gmail.com">jyothish24092004@gmail.com</a>
+              <a href="tel:+916303549360">+91 6303549360</a>
+              <a href="https://www.linkedin.com/in/boyina-jyothish/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
               <a href="https://github.com/JyothishBoyina" target="_blank" rel="noreferrer">
                 GitHub
               </a>
+            </div>
+
+            <div className="contact-signoff">
+              <span>Jyothish Boyina</span>
+              <span>Computer Science Undergraduate</span>
+              <span>VIT-AP University</span>
             </div>
           </div>
         </section>
